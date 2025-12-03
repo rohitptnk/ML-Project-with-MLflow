@@ -24,7 +24,7 @@ class ModelEvaluation:
     
     def log_into_mlflow(self):
         import dagshub
-        dagshub.init(repo_owner='rohitptnk', repo_name='ML-Project-with-MLflow', mlflow=True)
+        dagshub.init(repo_owner='rohitptnk', repo_name='ML-Project-with-MLflow', mlflow=True) # type: ignore
 
         test_data = pd.read_csv(self.config.test_data_path)
         model = joblib.load(self.config.model_path)
